@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>YUCHEN</title>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	</head>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(images/body.gif);
+	font-size: 16px;
+	font-family: sans-serif,arial;
+}
+header{
+	width: 1000px;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	left: 20px;
+	top: 30px;
+}
+.nav{
+	width: 1000px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+ul li{
+	list-style: none;
+	width: 200px;
+	line-height: 40px;
+	position: relative;
+	background: red;
+	box-shadow: 0px 2px 5px 0px grey;
+	text-align: center;
+	float: left;
+	background: linear-gradient(green 20%,black 80%);
+}
+ul li ul{
+	position: absolute;
+}
+.nav > ul > li:nth-of-type(1){
+	border-radius: 5px 0px 0px 5px;
+}
+.nav > ul > li:nth-of-type(5){
+	border-radius: 0px 5px 5px 0px;
+}
+ul li a{
+	color: #fff;
+	width: 150px;
+	height: 30px;
+	display: inline-block;
+	text-decoration: none;
+}
+ul li a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid #fff;
+}
+ul li ul{
+	display: none;
+}
+.nav ul li:hover ul{
+	display: block;
+}
+.fa{
+	margin-right: 5px;
+}
+.fa-list.modify{
+	display: none;
+	font-size: 35px;
+	position: absolute;
+	right: 30px;
+	top:60px;
+	cursor: pointer;
+}
+.container{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	padding:20px 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 480px){
+	header{
+		width: 100%;
+	}
+	.nav{
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	ul li{
+		width: 100%;
+		float: none;
+	}
+	ul li a{
+		width: 100%;
+		display: block;
+	}
+	ul li ul{
+		position: static;
+	}
+	ul li ul li a{
+		background: rgb(46, 46, 46);
+	}
+	.fa-list.modify{
+		display: block;
+		background:#fff;
+	}
+	.container{
+		width: 100%;
+		height: auto;
+	}
+	body{
+		overflow-x:hidden;
+	}
+
+	.sidenav {padding-top: 15px;}
+  	.sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+<header>
+	<div class="logo"><img src="images/logo.png" width="110"></div>
+	<div class="menu"><span class="fa fa-list modify"></span></div>
+
+</header>
+
+
+ 
+<div id="mySidenav" class="sidenav">
+
+	<tr><td>
+	<a href="data_new/login.php"><img src="images/IMG_2281.JPG" alt="Snow" style="width:100%"></a></td></tr>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="data_new/login.php">About</a>
+	<!-- <a href="#">Services</a>
+	<a href="#"></a> -->
+	<a href="data_new/login.php">Contact</a>
+  </div>
+
+
+  <span style="font-size:30px;cursor:pointer;color: #FFF;" onclick="openNav()">&#9776; </span>
+
+
+<nav class="nav">
+	<ul>
+		<li><a href="index.html"><span class="fa fa-home"></span>Home</a></li>
+
+		<li><a href="#"><span class="fa fa-code"></span>JAVA作品集</a>
+			<ul>
+				<li><a href="index1-1.html">SWITCH CASE</a></li>
+				<li><a href="index1-1-2.html">FOR迴圈</a></li>
+				<li><a href="index1-1-3.html">年利率</a></li>
+				<li><a href="index1-1-4.html">質數的公式</a></li>
+				<li><a href="index1-1-5.html">比較大小</a></li>
+				<li><a href="index1-1-6.html">月&nbsp;&nbsp;&nbsp;份</a></li>
+				<li><a href="index1-1-7.html">骰&nbsp;&nbsp;&nbsp;子</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span class="fa fa-code"></span>Android作品集</a>
+			<!-- <a href="#"><span class="fa fa-list"></span>Android作品集</a>圖案顯示fa fa-file-video-o -->
+			<ul>
+			<li><a href="index1-3-1.html">帳號密碼登入系統</a></li>
+			<li><a href="index1-3-2.html">&nbsp;專題作品集&nbsp;</a></li>
+			<li><a href="index1-3-3.html">未&nbsp;完&nbsp;成&nbsp;</a></li>
+			<li><a href="index1-3-4.html">未&nbsp;完&nbsp;成&nbsp;</a></li>
+			<li><a href="index1-3-5.html">未&nbsp;完&nbsp;成&nbsp;</a></li>
+			<li><a href="index1-3-6.html">未&nbsp;完&nbsp;成&nbsp;</a></li>
+			<li><a href="index1-3-7.html">未&nbsp;完&nbsp;成&nbsp;</a></li>
+		</ul>
+
+		
+		</li>
+		<li><a href="#"><span class="fa fa-code"></span>SQL作品集</a>
+			<ul>
+				<li><a href="index1-4.html">查詢訂出項目</a></li>
+				<li><a href="index1-4-2.html">計算訂單的總價</a></li>
+				<li><a href="index1-4-3.html">查詢經銷商編號</a></li>
+				<li><a href="index1-4-4.html">查詢供應的廠商</a></li>
+				
+			</ul>
+		
+		
+		</li>
+		<li><a href="#"><span class="fa fa-info"></span>About YUCHEN</a>
+			<ul>
+				<li><a href="https://chelsealai.blogspot.com/">部落格</a></li>
+				
+				<!-- <li><a href="index1-4-4.html">518人力銀行</a></li> -->
+				
+			</ul>
+		
+		
+		</li>
+	</ul>
+</nav>
+
+<section class="container">
+	<p><font color="#fff">Welcome to Chelsea's portfolio, </font></p>
+	<p><font color="#fff">I am currently learning computer science and have set up this website by myself as a portfolio of my work. </font></p>
+	<p><font color="#fff">Thank you for your time and I am looking forward to hearing any comments from you.</font></p>
+
+
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var menu = false;
+	$(".fa-list.modify").click(function(){
+		if(menu == false){
+			$(".nav").fadeIn();
+			menu = true;
+		}else{
+			$(".nav").fadeOut();
+			menu = false;
+		}
+	})	
+
+</script>
+<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+	
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+
+</body>
+</html>

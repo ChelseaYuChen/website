@@ -1,0 +1,22 @@
+@charset "utf-8";
+#allbody {
+	background-color: #5FF8BD;
+	width: 100%;
+	height: auto;
+}
+#allbody #header {
+	width: 950px;
+	height: 150px;
+}
+#allbody #maiming {
+	height: 180px;
+	float: left;
+
+
+}
+#allbody #content {
+}
+#allbody #sidebar {
+}
+#allbody #footer {
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="loginpage.css">
+</head>
+<title>LOGIN</title>
+
+<script src="respond.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+<body>
+    <div class="loginbox">
+    <img src="images/login.png" class="avatar">
+    <h1>Login System</h1>
+    <form name="login" onsubmit="return validateForm() ;" method="POST">
+
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Enter Username">
+        <p>Password</p>
+        <input type="password" name="password" placeholder="Enter Password">
+        <input type="submit" name="submit" value="Login" onclick="validate()">
+        <!-- <h4><a href="#">Lost your password?</a></h4><br>-->
+        <a href="data/login.php" >Don't have an account?</a><br>
+        <a href="index-0.html"><p>Back to the page</p></a>
+    </form>
+</div>
+
+<script>
+
+var count = 2;
+
+function validate(){
+
+    var un = document.login.username.value;
+    var pw = document.login.password.value;
+    var valid = false;
+    var usernameArray = ["Chelsea","yuchen678"];
+    var passwordArray = ["123456","654321"];
+
+    for(var i = 0; i < usernameArray.length; i++){
+
+}    
+        if((un == usernameArray[i]) && (pw == passwordArrayp[i])){
+
+            valid = true;
+            break;
+        }
+    }
+
+        if(valid){
+            alert("Login was successful");
+            window.location = "index.html";
+            return false;
+
+        }
+
+        var again = "tries";
+
+        if(count == 1){
+            again =" try"
+        }
+
+        if(count >=1){
+            alert("Wrong please try again")
+            count --;
+        }else{
+            alert("Incorrect your now blocked");
+            document.login.username.value = "your now blocked";
+            document.login.password.value = "oops";
+            document.login.username.disabled = true;
+            document.login.password.disabled = true;
+            return false;
+        }
+ 
+
+    </script>
+
+
+</body>
+
+</html>
